@@ -10,9 +10,6 @@
     "build"
   ],
   "scripts": {
-    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
-    "prepare": "npm run build",
-    "watch": "tsc --watch",
     "inspector": "npx @modelcontextprotocol/inspector build/index.js"
   },
   "dependencies": {
@@ -20,10 +17,6 @@
     "@modelcontextprotocol/sdk": "^1.0.3",
     "dotenv": "^16.4.6",
     "zod": "^3.24.2"
-  },
-  "devDependencies": {
-    "@types/node": "^20.17.9",
-    "typescript": "^5.3.3"
   },
   "repository": {
     "type": "git",
