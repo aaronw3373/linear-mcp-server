@@ -993,7 +993,7 @@ async function main() {
                         return {
                             content: [{
                                     type: "text",
-                                    text: `Found ${issues.length} issues:\n${issues.map((issue) => `- ${issue.identifier}: ${issue.title}\n  Priority: ${issue.priority || 'None'}\n  Status: ${issue.status || 'None'}\n  ${issue.url}`).join('\n')}`,
+                                    text: `Found ${issues.length} issues:\n${issues.map((issue) => `- ${issue.identifier}: ${issue.title}\n  Priority: ${issue.priority || 'None'}\n  Status: ${issue.status || 'None'}\n  ${issue.url}${issue.description ? '\n  Description: ' + issue.description : ''}`).join('\n')}`,
                                     metadata: baseResponse
                                 }]
                         };
@@ -1004,7 +1004,7 @@ async function main() {
                         return {
                             content: [{
                                     type: "text",
-                                    text: `Found ${issues.length} issues:\n${issues.map((issue) => `- ${issue.identifier}: ${issue.title}\n  Priority: ${issue.priority || 'None'}\n  Status: ${issue.stateName}\n  ${issue.url}`).join('\n')}`,
+                                    text: `Found ${issues.length} issues:\n${issues.map((issue) => `- ${issue.identifier}: ${issue.title}\n  Priority: ${issue.priority || 'None'}\n  Status: ${issue.stateName}\n  ${issue.url}${issue.description ? '\n  Description: ' + issue.description : ''}`).join('\n')}`,
                                     metadata: baseResponse
                                 }]
                         };
